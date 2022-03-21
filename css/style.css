@@ -134,18 +134,24 @@ button:hover {
     transition: .5s ease;
 }
 
-.hang {
+.stick {
     position: absolute;
     display: none;
-    transform: rotate(25deg);
-    top: 3%;
-    left: 7%;
-    text-align: center;
+    text-align: left;
+    top: 20%;
+    left: 20%;
 }
 
-.hang > p {
+.hang {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: -30%;
+}
+
+.stick > p, .hang > p {
     line-height: 95%;
-    font-size: 5rem;
+    font-size: 4rem;
     user-select: none;
 }
 
@@ -169,5 +175,5 @@ button:hover {
 }
 
 @media (min-width: 1025px) {
-    .hang { display: block; }
+    .stick { display: block; }
 }

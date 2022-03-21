@@ -26,7 +26,7 @@ export const words = [
     { word: 'kiwi', tip: 'Fruta' },
     { word: 'mexerica', tip: 'Fruta' },
     { word: 'pequi', tip: 'Fruta' },
-    { word: 'morgango', tip: 'Fruta' },
+    { word: 'morango', tip: 'Fruta' },
     { word: 'tamarindo', tip: 'Fruta' },
     { word: 'laranja', tip: 'Fruta' },
 ]

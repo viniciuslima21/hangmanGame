@@ -12,6 +12,11 @@ const chance0 = document.querySelector('#chance0')
 const form = document.querySelector('form')
 const inputLetter = document.querySelector('input')
 
+const correct = new Audio('./assets/audio/correct.mp3')
+const wrong = new Audio('./assets/audio/wrong.mp3')
+const lose = new Audio('./assets/audio/lose.mp3')
+const win = new Audio('./assets/audio/win.mp3')
+
 const letters = []
 
 const numberOfChances = 3
@@ -70,17 +75,19 @@ const letterHasAlreadyBeenInformed = letter => {
 const letterExist = letter => {
     const wordSplitted = getWordSplitted()
     const { word } = getWord()
-    const style = 'color: #0febdc'
+    const style = 'color: #FF4040'
     let chances = getChances()
 
     for (let i of wordSplitted) {
-        if (i === letter) return
+        if (i === letter) return correct.play()
     }
 
     if (chances === 3) {
+        wrong.play()
         chance2.style = style
         chances = 2
     } else if (chances === 2) {
+        wrong.play()
         chance1.style = style
         chances = 1
     }
@@ -88,10 +95,11 @@ const letterExist = letter => {
         chance0.style = style
         chances = 0
 
+        lose.play()
         setTimeout(() => {
             alert('Enforcado! Você errou a letra pela 3ª vez. 😞 \nA resposta certa era: ' + word)
             location.reload()
-        }, 600)
+        }, 500)
     }
     setChances(chances)
     chancesDisplay.innerHTML = chances
@@ -160,11 +168,17 @@ const showLetter = e => {
             alert('ATENÇÃO: Essa letra já foi informada!')
     } else {
         if (word === letterOrWord) {
-            alert('Parabéns! Você acertou! 🥳')
-            location.reload()
+            win.play()
+            setTimeout(() => {
+                alert('Parabéns! Você acertou! 🥳')
+                location.reload()
+            }, 500)
         } else {
-            alert('Você errou! 😞 \nA resposta certa era: ' + word)
-            location.reload()
+            lose.play()
+            setTimeout(() => {
+                alert('Você errou! 😞 \nA resposta certa era: ' + word)
+                location.reload()
+            }, 500)
         }
     }
 }

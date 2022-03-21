@@ -14,7 +14,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
 		/>
-        <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Jogo da Forca</title>
 	</head>
@@ -58,15 +58,22 @@
 					</div>
 					<div>
 						<h3>Chances</h3>
-						<p>Falta <span id="chancesDisplay">3</span> chance(s).</p>
+						<p>Falta(m) <span id="chancesDisplay">3</span> chance(s).</p>
 					</div>
 				</div>
 			</div>
-			<div class="hang">
-				<p id="chance2">o</p>
-				<p id="chance1">/|\</p>
-				<p id="chance0">/\</p>
-			</div>
+            <div class="stick">
+                <p>__</p>
+                <p>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</p>
+                <p>|</p>
+                <p>|</p>
+                <p>|</p>
+                <div class="hang">
+                    <p id="chance2">o</p>
+                    <p id="chance1">/|\</p>
+                    <p id="chance0">/\</p>
+                </div>
+            </div>
 			<p id="footer">
 				Desenvolvido por
 				<a href="https://github.com/viniciuslima21" target="_blank">Vinícius Lima</a>.
