@@ -23,7 +23,7 @@ h1 {
     line-height: 100%;
 	text-align: center;
     color: var(--font);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 h3 {
@@ -52,9 +52,21 @@ p > span { font-weight: 500; }
 	margin: 50px auto;
 }
 
+.info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.info p { font-size: 1rem; }
+
+.info  span {
+    color: var(--primary);
+    padding-right: 3px;
+}
+
 #wordDisplay {
 	font-weight: 500;
-	margin: 50px;
+	margin: 50px 0;
 	font-size: 1.8rem;
 	text-transform: uppercase;
 }
@@ -138,7 +150,7 @@ button:hover {
     position: absolute;
     display: none;
     text-align: left;
-    top: 20%;
+    top: 30%;
     left: 20%;
 }
 
@@ -156,7 +168,7 @@ button:hover {
 }
 
 #footer {
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 #footer > a {
@@ -168,10 +180,12 @@ button:hover {
 /* RESPONSIVE */
 @media (max-width: 767px) {
     #content { max-width: 95%; }
+    .info { max-width: 95%; }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #content { max-width: 90%; }
+    .info { max-width: 90% }
 }
 
 @media (min-width: 1025px) {
