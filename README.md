@@ -2,7 +2,7 @@
 Jogo da forca feito em javascript puro.
 
 Deploy do projeto:
-https://viniciuslimaan.github.io/hangmanGame/
+https://viniciuslimaan.github.io/hangmanGame
 
 Para visualizar em seu computador use:
 
